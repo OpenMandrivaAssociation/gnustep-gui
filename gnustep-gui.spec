@@ -12,6 +12,7 @@ Summary: 	GNUstep GUI package
 URL:		http://www.gnustep.org/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 Requires:	gnustep-base
+BuildRequires:	gcc-objc
 BuildRequires:	gnustep-base >= 0.14.0
 BuildRequires:	gnustep-make
 BuildRequires:	cups-devel
