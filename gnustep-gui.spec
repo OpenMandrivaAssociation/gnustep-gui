@@ -2,6 +2,8 @@
 %define name		gnustep-gui
 %define release		%mkrel 1
 
+%define major	0.12
+
 Name: 		%{name}
 Version: 	%{version}
 Release: 	%{release}
@@ -20,6 +22,7 @@ BuildRequires:	aspell-devel
 BuildRequires:	libportaudio-devel
 BuildRequires:	libaudiofile-devel
 BuildRequires:	X11-devel	
+Provides:	libgnustep-gui.so.%{major} libgnustep-gui.so.%{major}()(64bit)
 
 %description
 This is a library of graphical user interface classes written completely in the
