@@ -22,7 +22,7 @@ BuildRequires:	gnustep-base-devel >= 0.14.0
 BuildRequires:	gnustep-make
 BuildRequires:	cups-devel
 BuildRequires:	aspell-devel
-BuildRequires:	libportaudio2-devel
+BuildRequires:	portaudio-devel
 BuildRequires:	libaudiofile-devel
 BuildRequires:	X11-devel	
 Requires:	gnustep-base
