@@ -1,6 +1,6 @@
-%define version		0.12.0
+%define version		0.12.1
 %define name		gnustep-gui
-%define release		%mkrel 4
+%define release		%mkrel 1
 
 %define major	0.12
 
@@ -10,8 +10,8 @@
 Name: 		%{name}
 Version: 	%{version}
 Release: 	%{release}
-Source: 	%{name}-%{version}.tar.bz2
-License: 	GPL
+Source: 	ftp://ftp.gnustep.org/pub/gnustep/core/%{name}-%{version}.tar.gz
+License: 	GPLv2+
 Group:		Development/Other
 Summary: 	GNUstep GUI package
 URL:		http://www.gnustep.org/
