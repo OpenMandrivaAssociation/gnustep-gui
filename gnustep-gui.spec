@@ -1,8 +1,8 @@
-%define version		0.12.1
+%define version		0.13.2
 %define name		gnustep-gui
 %define release		%mkrel 1
 
-%define major	0.12
+%define major	0.13
 
 %define libname %mklibname %name %major
 %define libnamedev %mklibname %name -d
@@ -72,7 +72,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr (-, root, root)
-%doc ANNOUNCE COPYING.LIB BUGS NEWS README NOTES
+%doc ANNOUNCE COPYING.LIB BUGS NEWS README
 %{_bindir}/*
 %{_prefix}/lib/GNUstep/*
 
