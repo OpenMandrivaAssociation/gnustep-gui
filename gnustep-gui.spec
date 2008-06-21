@@ -1,8 +1,8 @@
-%define version		0.13.2
+%define version		0.14.0
 %define name		gnustep-gui
 %define release		%mkrel 1
 
-%define major	0.13
+%define major	0.14
 
 %define libname %mklibname %name %major
 %define libnamedev %mklibname %name -d
@@ -58,10 +58,12 @@ Libraries and includes files for developing programs based on %name.
 %setup -q
 
 %build
-CFLAGS="$RPM_OPT_FLAGS" ./configure --prefix=%{_prefix}
+%define __cputoolize /bin/true
+%configure2_5x
 make
 
 %install
+rm -fr %buildroot
 %makeinstall_std
 
 %if %mdkversion < 200900
