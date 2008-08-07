@@ -1,6 +1,6 @@
 %define version		0.14.0
 %define name		gnustep-gui
-%define release		%mkrel 1
+%define release		%mkrel 2
 
 %define major	0.14
 
