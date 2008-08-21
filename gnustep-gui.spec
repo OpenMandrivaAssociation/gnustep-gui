@@ -11,6 +11,7 @@ Name: 		%{name}
 Version: 	%{version}
 Release: 	%{release}
 Source: 	ftp://ftp.gnustep.org/pub/gnustep/core/%{name}-%{version}.tar.gz
+Patch0:		gnustep-gui-0.14.0-fix-undefined.patch
 License: 	GPLv2+
 Group:		Development/Other
 Summary: 	GNUstep GUI package
@@ -56,6 +57,7 @@ Libraries and includes files for developing programs based on %name.
 
 %prep
 %setup -q
+%patch0 -p0
 
 %build
 %define __cputoolize /bin/true
