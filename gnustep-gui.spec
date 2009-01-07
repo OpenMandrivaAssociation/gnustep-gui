@@ -1,8 +1,8 @@
-%define version		0.14.0
+%define version		0.16.0
 %define name		gnustep-gui
-%define release		%mkrel 2
+%define release		%mkrel 1
 
-%define major	0.14
+%define major	0.16
 
 %define libname %mklibname %name %major
 %define libnamedev %mklibname %name -d
@@ -11,7 +11,6 @@ Name: 		%{name}
 Version: 	%{version}
 Release: 	%{release}
 Source: 	ftp://ftp.gnustep.org/pub/gnustep/core/%{name}-%{version}.tar.gz
-Patch0:		gnustep-gui-0.14.0-fix-undefined.patch
 License: 	GPLv2+
 Group:		Development/Other
 Summary: 	GNUstep GUI package
@@ -57,7 +56,6 @@ Libraries and includes files for developing programs based on %name.
 
 %prep
 %setup -q
-%patch0 -p0
 
 %build
 %define __cputoolize /bin/true
