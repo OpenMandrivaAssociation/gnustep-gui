@@ -84,7 +84,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -n %{libname}
 %defattr(-,root,root)
-%{_prefix}/lib/lib%{name}.so.%{major}
+%{_prefix}/lib/lib%{name}.so.%{major}*
 
 %files -n %{libnamedev}
 %defattr(-,root,root)
