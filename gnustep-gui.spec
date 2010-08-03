@@ -1,8 +1,8 @@
-%define version		0.16.0
+%define version		0.18.0
 %define name		gnustep-gui
 %define release		%mkrel 1
 
-%define major	0.16
+%define major	0.18
 
 %define libname %mklibname %name %major
 %define libnamedev %mklibname %name -d
@@ -22,9 +22,12 @@ BuildRequires:	gnustep-base-devel >= 0.14.0
 BuildRequires:	gnustep-make
 BuildRequires:	cups-devel
 BuildRequires:	aspell-devel
-BuildRequires:	portaudio-devel
-BuildRequires:	libaudiofile-devel
-BuildRequires:	X11-devel	
+BuildRequires:	libao-devel
+BuildRequires:	libsndfile-devel
+BuildRequires:	jpeg-devel
+BuildRequires:	png-devel
+BuildRequires:	ungif-devel
+Buildrequires:	libtiff-devel
 Requires:	gnustep-base
 
 %description
@@ -58,9 +61,8 @@ Libraries and includes files for developing programs based on %name.
 %setup -q
 
 %build
-%define __cputoolize /bin/true
 %configure2_5x
-make
+%make
 
 %install
 rm -fr %buildroot
