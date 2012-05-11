@@ -1,6 +1,6 @@
 %define version		0.22.0
 %define name		gnustep-gui
-%define release		1
+%define release		2
 
 %define major	0.22
 
