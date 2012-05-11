@@ -1,8 +1,8 @@
-%define version		0.18.0
+%define version		0.22.0
 %define name		gnustep-gui
-%define release		%mkrel 1
+%define release		1
 
-%define major	0.18
+%define major	0.22
 
 %define libname %mklibname %name %major
 %define libnamedev %mklibname %name -d
@@ -18,8 +18,8 @@ URL:		http://www.gnustep.org/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 Requires:	gnustep-base
 BuildRequires:	gcc-objc
-BuildRequires:	gnustep-base-devel >= 0.14.0
-BuildRequires:	gnustep-make
+BuildRequires:	gnustep-base-devel >= 0.15.0
+BuildRequires:	gnustep-make >= 2.0.0
 BuildRequires:	cups-devel
 BuildRequires:	aspell-devel
 BuildRequires:	libao-devel
