@@ -1,33 +1,28 @@
-%define version		0.22.0
-%define name		gnustep-gui
-%define release		2
-
-%define major	0.22
+%define major	%(echo %version |cut -d. -f1-2)
 
 %define libname %mklibname %name %major
 %define libnamedev %mklibname %name -d
 
-Name: 		%{name}
-Version: 	%{version}
-Release: 	%{release}
-Source: 	ftp://ftp.gnustep.org/pub/gnustep/core/%{name}-%{version}.tar.gz
+Name: 		gnustep-gui
+Version: 	0.22.0
+Release: 	1
+Source0: 	ftp://ftp.gnustep.org/pub/gnustep/core/%{name}-%{version}.tar.gz
 License: 	GPLv2+
 Group:		Development/Other
 Summary: 	GNUstep GUI package
 URL:		http://www.gnustep.org/
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 Requires:	gnustep-base
 BuildRequires:	gcc-objc
-BuildRequires:	gnustep-base-devel >= 0.15.0
-BuildRequires:	gnustep-make >= 2.0.0
+BuildRequires:	gnustep-base-devel >= 1.24.0
+BuildRequires:	gnustep-make >= 2.6.2
 BuildRequires:	cups-devel
 BuildRequires:	aspell-devel
-BuildRequires:	libao-devel
-BuildRequires:	libsndfile-devel
+BuildRequires:	pkgconfig(ao)
+BuildRequires:	pkgconfig(sndfile)
 BuildRequires:	jpeg-devel
-BuildRequires:	png-devel
+BuildRequires:	pkgconfig(libpng) >= 1.5
 BuildRequires:	ungif-devel
-Buildrequires:	libtiff-devel
+Buildrequires:	pkgconfig(libtiff-4)
 Requires:	gnustep-base
 
 %description
