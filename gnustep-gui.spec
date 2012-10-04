@@ -11,10 +11,10 @@ License: 	GPLv2+
 Group:		Development/Other
 Summary: 	GNUstep GUI package
 URL:		http://www.gnustep.org/
-Requires:	gnustep-base
+Requires:	gnustep-base >= 1.24.0-3
 BuildRequires:	gcc-objc
-BuildRequires:	gnustep-base-devel >= 1.24.0
-BuildRequires:	gnustep-make >= 2.6.2
+BuildRequires:	gnustep-base-devel >= 1.24.0-3
+BuildRequires:	gnustep-make >= 2.6.2-3
 BuildRequires:	cups-devel
 BuildRequires:	aspell-devel
 BuildRequires:	pkgconfig(ao)
@@ -23,7 +23,6 @@ BuildRequires:	jpeg-devel
 BuildRequires:	pkgconfig(libpng) >= 1.5
 BuildRequires:	ungif-devel
 Buildrequires:	pkgconfig(libtiff-4)
-Requires:	gnustep-base
 
 %description
 This is a library of graphical user interface classes written completely in the
@@ -56,12 +55,12 @@ Libraries and includes files for developing programs based on %name.
 %setup -q
 
 %build
-%configure2_5x
-%make
+%configure2_5x --with-installation-domain=SYSTEM
+%make GNUSTEP_INSTALLATION_DOMAIN=SYSTEM
 
 %install
 rm -fr %buildroot
-%makeinstall_std
+%makeinstall_std GNUSTEP_INSTALLATION_DOMAIN=SYSTEM
 
 %if %mdkversion < 200900
 %post -n %{libname} -p /sbin/ldconfig
@@ -77,14 +76,14 @@ rm -rf $RPM_BUILD_ROOT
 %defattr (-, root, root)
 %doc ANNOUNCE COPYING.LIB BUGS NEWS README
 %{_bindir}/*
-%{_prefix}/lib/GNUstep/*
+%{_libdir}/GNUstep/*
 
 %files -n %{libname}
 %defattr(-,root,root)
-%{_prefix}/lib/lib%{name}.so.%{major}*
+%{_libdir}/lib%{name}.so.%{major}*
 
 %files -n %{libnamedev}
 %defattr(-,root,root)
 %{_includedir}/*
-%{_prefix}/lib/*.so
+%{_libdir}/*.so
 %{_datadir}/GNUstep/Makefiles/Additional/*
