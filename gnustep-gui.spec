@@ -5,7 +5,7 @@
 
 Name: 		gnustep-gui
 Version: 	0.22.0
-Release: 	3
+Release: 	4
 Source0: 	ftp://ftp.gnustep.org/pub/gnustep/core/%{name}-%{version}.tar.gz
 License: 	GPLv2+
 Group:		Development/Other
