@@ -4,8 +4,8 @@
 %define libnamedev %mklibname %name -d
 
 Name: 		gnustep-gui
-Version: 	0.22.0
-Release: 	3
+Version: 	0.23.1
+Release: 	1
 Source0: 	ftp://ftp.gnustep.org/pub/gnustep/core/%{name}-%{version}.tar.gz
 License: 	GPLv2+
 Group:		Development/Other
