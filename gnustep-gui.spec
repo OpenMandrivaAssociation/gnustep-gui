@@ -7,6 +7,7 @@ Name: 		gnustep-gui
 Version: 	0.23.1
 Release: 	1
 Source0: 	ftp://ftp.gnustep.org/pub/gnustep/core/%{name}-%{version}.tar.gz
+Patch1:		gnustep-gui-0.23.1-giflib5.patch
 License: 	GPLv2+
 Group:		Development/Other
 Summary: 	GNUstep GUI package
@@ -53,6 +54,7 @@ Libraries and includes files for developing programs based on %name.
 
 %prep
 %setup -q
+%patch1 -p1
 
 %build
 %configure2_5x --with-installation-domain=SYSTEM
