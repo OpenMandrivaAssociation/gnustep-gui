@@ -4,9 +4,8 @@
 
 Summary: 	GNUstep GUI package
 Name: 		gnustep-gui
-Version: 	0.23.1
-Release: 	5
-Patch1:		gnustep-gui-0.23.1-giflib5.patch
+Version: 	0.24.0
+Release: 	1
 License: 	GPLv2+
 Group:		Development/Other
 Url:		http://www.gnustep.org/
