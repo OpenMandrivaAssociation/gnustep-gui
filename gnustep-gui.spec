@@ -54,6 +54,9 @@ Library and includes files for developing programs based on %{name}.
 %apply_patches
 
 %build
+export CC=`gnustep-config --variable=CC`
+export CXX=`gnustep-config --variable=CXX`
+
 %configure2_5x --with-installation-domain=SYSTEM
 %make GNUSTEP_INSTALLATION_DOMAIN=SYSTEM
 
