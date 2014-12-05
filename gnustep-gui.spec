@@ -5,7 +5,7 @@
 Summary: 	GNUstep GUI package
 Name: 		gnustep-gui
 Version: 	0.24.0
-Release: 	3
+Release: 	4
 License: 	GPLv2+
 Group:		Development/Other
 Url:		http://www.gnustep.org/
@@ -21,7 +21,7 @@ BuildRequires:	ungif-devel
 BuildRequires:	pkgconfig(ao)
 BuildRequires:	pkgconfig(sndfile)
 BuildRequires:	pkgconfig(libpng) >= 1.5
-Buildrequires:	pkgconfig(libtiff-4)
+BuildRequires:	pkgconfig(libtiff-4)
 Requires:	gnustep-base >= 1.24.0-3
 
 %description
