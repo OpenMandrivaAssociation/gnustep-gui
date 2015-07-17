@@ -1,2 +1,4 @@
+removed_sources:
+  gnustep-gui-0.24.0.tar.gz: c6820461e8a3d6ed0f90c13c1e7bf63aa37ead99
 sources:
-  "gnustep-gui-0.24.0.tar.gz": c6820461e8a3d6ed0f90c13c1e7bf63aa37ead99
+  gnustep-gui-0.24.1.tar.gz: 1145d035d2460ad735ee507f26ea5ea766d70a8a
