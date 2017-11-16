@@ -4,8 +4,8 @@
 
 Summary: 	GNUstep GUI package
 Name: 		gnustep-gui
-Version: 	0.25.0
-Release: 	2
+Version: 	0.25.1
+Release: 	1
 License: 	GPLv2+
 Group:		Development/Other
 Url:		http://www.gnustep.org/
