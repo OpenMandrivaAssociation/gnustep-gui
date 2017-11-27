@@ -5,7 +5,7 @@
 Summary: 	GNUstep GUI package
 Name: 		gnustep-gui
 Version: 	0.24.1
-Release: 	2
+Release: 	3
 License: 	GPLv2+
 Group:		Development/Other
 Url:		http://www.gnustep.org/
@@ -44,7 +44,7 @@ Dynamic libraries from %{name}.
 Summary:        Header files and development library from %{name}
 Group:          Development/Other
 Requires:       %{libname} >= %{version}
-Provides:       %{name}-devel = %{version}-%{release} 
+Provides:       %{name}-devel = %{version}-%{release}
 
 %description -n %{devname}
 Library and includes files for developing programs based on %{name}.
