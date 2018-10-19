@@ -19,6 +19,9 @@ BuildRequires:	gnustep-base-devel >= 1.24.0-2
 BuildRequires:	jpeg-devel
 BuildRequires:	ungif-devel
 BuildRequires:	pkgconfig(ao)
+BuildRequires:	pkgconfig(krb5-gssapi)
+BuildRequires:	pkgconfig(com_err)
+
 BuildRequires:	pkgconfig(sndfile)
 BuildRequires:	pkgconfig(libpng) >= 1.5
 BuildRequires:	pkgconfig(libtiff-4)
