@@ -1,0 +1,21 @@
+diff -up gnustep-gui-0.28.0/Source/GSCharacterPanel.m.omv~ gnustep-gui-0.28.0/Source/GSCharacterPanel.m
+--- gnustep-gui-0.28.0/Source/GSCharacterPanel.m.omv~	2021-04-12 21:33:35.031689918 +0200
++++ gnustep-gui-0.28.0/Source/GSCharacterPanel.m	2021-04-12 21:33:43.948320726 +0200
+@@ -78,7 +78,7 @@
+ static UBool enumCharNamesFn(void *context, UChar32 code, UCharNameChoice nameChoice, const char *name, int32_t length)
+ {
+   [(NSMutableIndexSet*)context addIndex: (NSUInteger)code];
+-  return TRUE;
++  return true;
+ }
+ 
+ static NSIndexSet *AssignedCodepoints()
+@@ -103,7 +103,7 @@ static UBool searchCharNamesFn(void *con
+     {
+       [ctx->set addIndex: (NSUInteger)code];
+     }
+-  return TRUE;
++  return true;
+ }
+ 
+ static NSIndexSet *CodepointsWithNameContainingSubstring(NSString *str)

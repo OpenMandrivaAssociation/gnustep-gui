@@ -4,14 +4,14 @@
 
 Summary: 	GNUstep GUI package
 Name: 		gnustep-gui
-Version: 	0.27.0
-Release: 	3
+Version: 	0.28.0
+Release: 	1
 License: 	GPLv2+
 Group:		Development/Other
 Url:		http://www.gnustep.org/
-Source0: 	ftp://ftp.gnustep.org/pub/gnustep/core/%{name}-%{version}.tar.gz
+Source0: 	http://ftpmain.gnustep.org/pub/gnustep/core/%{name}-%{version}.tar.gz
+Patch0:		gnustep-gui-icu-69.patch
 
-BuildRequires:	gcc-objc
 BuildRequires:	gnustep-make >= 2.6.2-3
 BuildRequires:	aspell-devel
 BuildRequires:	cups-devel
@@ -21,6 +21,7 @@ BuildRequires:	ungif-devel
 BuildRequires:	pkgconfig(ao)
 BuildRequires:	pkgconfig(krb5-gssapi)
 BuildRequires:	pkgconfig(com_err)
+BuildRequires:	pkgconfig(libobjc)
 
 BuildRequires:	pkgconfig(sndfile)
 BuildRequires:	pkgconfig(libpng) >= 1.5
@@ -53,18 +54,17 @@ Provides:       %{name}-devel = %{version}-%{release}
 Library and includes files for developing programs based on %{name}.
 
 %prep
-%setup -q
-%autopatch -p1
+%autosetup -p1
 
 %build
 export CC=`gnustep-config --variable=CC`
 export CXX=`gnustep-config --variable=CXX`
 
-%configure2_5x --with-installation-domain=SYSTEM
-%make GNUSTEP_INSTALLATION_DOMAIN=SYSTEM
+%configure --with-installation-domain=SYSTEM
+%make_build GNUSTEP_INSTALLATION_DOMAIN=SYSTEM
 
 %install
-%makeinstall_std GNUSTEP_INSTALLATION_DOMAIN=SYSTEM
+%make_install GNUSTEP_INSTALLATION_DOMAIN=SYSTEM
 
 %files
 %doc ANNOUNCE COPYING.LIB BUGS NEWS README
