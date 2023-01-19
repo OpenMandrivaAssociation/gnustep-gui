@@ -1,21 +1,22 @@
-%define major	%(echo %version |cut -d. -f1-2)
-%define libname %mklibname %{name} %{major}
+%define major	%(echo %version |cut -d. -f1)
+%define libname %mklibname %{name}
 %define devname %mklibname %{name} -d
+%define underscoredversion %(echo %{version} |sed -e 's,\\.,_,g')
 
 Summary: 	GNUstep GUI package
 Name: 		gnustep-gui
-Version: 	0.29.0
+Version: 	0.30.0
 Release: 	1
 License: 	GPLv2+
 Group:		Development/Other
 Url:		http://www.gnustep.org/
-Source0: 	http://ftpmain.gnustep.org/pub/gnustep/core/%{name}-%{version}.tar.gz
+Source0: 	https://github.com/gnustep/libs-gui/releases/download/gui-%{underscoredversion}/gnustep-gui-%{version}.tar.gz
 Patch0:		gnustep-gui-icu-69.patch
 
-BuildRequires:	gnustep-make >= 2.6.2-3
+BuildRequires:	gnustep-make >= 2.9.1
 BuildRequires:	aspell-devel
 BuildRequires:	cups-devel
-BuildRequires:	gnustep-base-devel >= 1.24.0-2
+BuildRequires:	gnustep-base-devel >= 1.29.0
 BuildRequires:	jpeg-devel
 BuildRequires:	ungif-devel
 BuildRequires:	pkgconfig(ao)
@@ -26,7 +27,7 @@ BuildRequires:	pkgconfig(libobjc)
 BuildRequires:	pkgconfig(sndfile)
 BuildRequires:	pkgconfig(libpng) >= 1.5
 BuildRequires:	pkgconfig(libtiff-4)
-Requires:	gnustep-base >= 1.24.0-3
+Requires:	gnustep-base >= 1.29.0
 
 %description
 This is a library of graphical user interface classes written completely in the
@@ -40,6 +41,8 @@ classes for handling events, colors, fonts, pasteboards and images.
 %package -n     %{libname}
 Summary:        Dynamic libraries from %{name}
 Group:          System/Libraries
+%define oldlibname %mklibname %{name} 0.29
+Obsoletes:	%{oldlibname} < %{EVRD}
 
 %description -n %{libname}
 Dynamic libraries from %{name}.
@@ -78,4 +81,3 @@ export CXX=`gnustep-config --variable=CXX`
 %{_includedir}/*
 %{_libdir}/*.so
 %{_datadir}/GNUstep/Makefiles/Additional/*
-
