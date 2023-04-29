@@ -1,0 +1,17 @@
+diff -up gnustep-gui-0.30.0/Source/NSBitmapImageRep+GIF.m.omv~ gnustep-gui-0.30.0/Source/NSBitmapImageRep+GIF.m
+--- gnustep-gui-0.30.0/Source/NSBitmapImageRep+GIF.m.omv~	2023-04-29 13:58:27.285507271 +0200
++++ gnustep-gui-0.30.0/Source/NSBitmapImageRep+GIF.m	2023-04-29 13:59:01.381810633 +0200
+@@ -51,6 +51,13 @@ objective-c headers.
+ #include <gif_lib.h>
+ #undef Object
+ 
++// Exists in giflib, and is used, but isn't mentioned in headers...
++extern int GifQuantizeBuffer(unsigned int Width, unsigned int Height,
++                   int *ColorMapSize, GifByteType * RedInput,
++                   GifByteType * GreenInput, GifByteType * BlueInput,
++                   GifByteType * OutputBuffer,
++                   GifColorType * OutputColorMap);
++
+ // GIF 5.0 no longer has this define
+ #ifndef FALSE
+ #define FALSE       0

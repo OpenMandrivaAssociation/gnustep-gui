@@ -6,12 +6,13 @@
 Summary: 	GNUstep GUI package
 Name: 		gnustep-gui
 Version: 	0.30.0
-Release: 	2
+Release: 	3
 License: 	GPLv2+
 Group:		Development/Other
 Url:		http://www.gnustep.org/
 Source0: 	https://github.com/gnustep/libs-gui/releases/download/gui-%{underscoredversion}/gnustep-gui-%{version}.tar.gz
 Patch0:		gnustep-gui-icu-69.patch
+Patch1:		gnustep-gnu-0.30.0-clang16.patch
 
 BuildRequires:	gnustep-make >= 2.9.1
 BuildRequires:	aspell-devel
