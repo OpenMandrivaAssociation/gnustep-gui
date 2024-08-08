@@ -5,8 +5,8 @@
 
 Summary: 	GNUstep GUI package
 Name: 		gnustep-gui
-Version: 	0.30.0
-Release: 	3
+Version: 	0.31.1
+Release: 	1
 License: 	GPLv2+
 Group:		Development/Other
 Url:		http://www.gnustep.org/
@@ -82,3 +82,4 @@ export CXX=`gnustep-config --variable=CXX`
 %{_includedir}/*
 %{_libdir}/*.so
 %{_datadir}/GNUstep/Makefiles/Additional/*
+%{_libdir}/pkgconfig/*.pc
