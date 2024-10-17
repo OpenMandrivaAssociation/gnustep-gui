@@ -9,7 +9,7 @@ Version: 	0.31.1
 Release: 	1
 License: 	GPLv2+
 Group:		Development/Other
-Url:		http://www.gnustep.org/
+Url:		https://www.gnustep.org/
 Source0: 	https://github.com/gnustep/libs-gui/releases/download/gui-%{underscoredversion}/gnustep-gui-%{version}.tar.gz
 Patch0:		gnustep-gui-icu-69.patch
 Patch1:		gnustep-gnu-0.30.0-clang16.patch
