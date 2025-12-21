@@ -14,6 +14,10 @@ Source0: 	https://github.com/gnustep/libs-gui/releases/download/gui-%{underscore
 Patch0:		gnustep-gui-icu-69.patch
 Patch1:		gnustep-gnu-0.30.0-clang16.patch
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
 BuildRequires:	gnustep-make >= 2.9.1
 BuildRequires:	aspell-devel
 BuildRequires:	cups-devel
